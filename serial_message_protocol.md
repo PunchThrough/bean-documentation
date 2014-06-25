@@ -1,6 +1,6 @@
 # [LightBlue Bean](http://punchthrough.com/bean/) Serial Message Protocol
 
-* Documentation version: 0.2.0
+* Documentation version: 0.2.1
 * Created: 2014-06-25
 * Updated: 2014-06-25
 * Copyright: [Punch Through Design](http://punchthrough.com)
@@ -82,7 +82,7 @@ To guarantee data integrity, the GT layer needs to include some metadata to ensu
 
 A GT Header has the following components:
 
- 1 bit | 2 bit   | 5 bit         
+ 1 bit | 2 bits  | 5 bits        
 -------|---------|--------------
  Start | Payload | Packet Count 
 
