@@ -23,7 +23,7 @@ Message ID | Payload
 ## Message ID
 * 2 bytes
 * Represents a specific predefined message type
-* Read the [App Message Types](../app_message_types.md) doc to learn more about App Message ID definitions
+* Read the [App Message Types](app_message_types.md) doc to learn more about App Message ID definitions
 
 ## Payload
 * 0 to 64 bytes
