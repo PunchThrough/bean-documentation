@@ -35,13 +35,9 @@ The GST is one level closer to the raw Bluetooth Low Energy characteristic. The 
 
 A GST packet has the following components:
 
-```
-┌────────┬──────────┬─────────────┬─────┐
-│ 1b     │ 1b       │ 2-66b       │ 2b  │
-├────────┼──────────┼─────────────┼─────┤
-│ Length │ Reserved │ App Message │ CRC │
-└────────┴──────────┴─────────────┴─────┘
-```
+  1b     | 1b       | 2-66b       | 2b  
+---------|----------|-------------|-----
+  Length | Reserved | App Message | CRC 
 
 ## Length
 * 1 byte
@@ -68,13 +64,9 @@ Although our GST packets can have lengths of up to 70 bytes, the Bluetooth Low E
 
 A GT packet has the following components:
 
-```
-┌────────┬─────────┐
-│ 1b     │ 0-19b   │
-├────────┼─────────┤
-│ Header │ Payload │
-└────────┴─────────┘
-```
+  1b     | 0-19b   
+---------|---------
+  Header | Payload 
 
 ## Header
 * 1 byte
@@ -90,13 +82,9 @@ To guarantee data integrity, the GT layer needs to include some metadata to ensu
 
 A GT Header has the following components:
 
-```
-┌───────┬─────────┬──────────────┬ ─ ─ ─ ─ ─ ─
-│ 1bit  │ 2bit    │ 5bit         │ 0-19byte
-├───────┼─────────┼──────────────┼ ─ ─ ─ ─ ─ ─
-│ Start │ Payload │ Packet Count │ Payload 
-└───────┴─────────┴──────────────┴ ─ ─ ─ ─ ─ ─
-```
+ 1bit  | 2bit    | 5bit         | 0-19byte
+-------|---------|--------------|-----------
+ Start | Payload | Packet Count | Payload 
 
 ## Start
 * 1 bit
