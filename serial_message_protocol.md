@@ -16,13 +16,9 @@ The App Message is the highest level of abstraction. Arduino sketches written fo
 
 An App Message has the following components:
 
-```
-┌────────────┬─────────┐
-│ 2b         │ 0-64b   │
-├────────────┼─────────┤
-│ Message ID │ Payload │
-└────────────┴─────────┘
-```
+2b         | 0-64b
+-----------|--------
+Message ID | Payload
 
 ## Message ID
 * 2 bytes
