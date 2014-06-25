@@ -1,6 +1,6 @@
 # [LightBlue Bean](http://punchthrough.com/bean/) Serial Message Protocol
 
-* Documentation version: 0.2.1
+* Documentation version: 0.3.0
 * Created: 2014-06-25
 * Updated: 2014-06-25
 * Copyright: [Punch Through Design](http://punchthrough.com)
@@ -22,8 +22,8 @@ Message ID | Payload
 
 ## Message ID
 * 2 bytes
-* Increments on each App Message
-* Represents a unique App Message
+* Represents a specific predefined message type
+* Read the [App Message Types](../app_message_types.md) doc to learn more about App Message ID definitions
 
 ## Payload
 * 0 to 64 bytes
