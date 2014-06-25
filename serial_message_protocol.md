@@ -16,7 +16,7 @@ The App Message is the highest level of abstraction. Arduino sketches written fo
 
 An App Message has the following components:
 
-2b         | 0-64b
+2 bytes    | 0-64 bytes
 -----------|--------
 Message ID | Payload
 
@@ -35,7 +35,7 @@ The GST is one level closer to the raw Bluetooth Low Energy characteristic. The 
 
 A GST packet has the following components:
 
-  1b     | 1b       | 2-66b       | 2b  
+  1 byte | 1 byte   | 2-66 bytes  | 2 bytes
 ---------|----------|-------------|-----
   Length | Reserved | App Message | CRC 
 
@@ -64,7 +64,7 @@ Although our GST packets can have lengths of up to 70 bytes, the Bluetooth Low E
 
 A GT packet has the following components:
 
-  1b     | 0-19b   
+  1 byte | 0-19 bytes
 ---------|---------
   Header | Payload 
 
@@ -82,9 +82,9 @@ To guarantee data integrity, the GT layer needs to include some metadata to ensu
 
 A GT Header has the following components:
 
- 1bit  | 2bit    | 5bit         | 0-19byte
--------|---------|--------------|-----------
- Start | Payload | Packet Count | Payload 
+ 1 bit | 2 bit   | 5 bit         
+-------|---------|--------------
+ Start | Payload | Packet Count 
 
 ## Start
 * 1 bit
