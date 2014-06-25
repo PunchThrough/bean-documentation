@@ -1,6 +1,6 @@
 # [LightBlue Bean](http://punchthrough.com/bean/) Serial Message Protocol
 
-* Documentation version: 0.1.0 **PRE-RELEASE**
+* Documentation version: 0.2.0
 * Created: 2014-06-25
 * Updated: 2014-06-25
 * Copyright: [Punch Through Design](http://punchthrough.com)
