@@ -1,6 +1,6 @@
 # [LightBlue Bean](http://punchthrough.com/bean/) Serial Message Protocol
 
-* Documentation version: 0.3.0
+* Documentation version: 0.3.1
 * Created: 2014-06-25
 * Updated: 2014-06-25
 * Copyright: [Punch Through Design](http://punchthrough.com)
@@ -84,13 +84,13 @@ A GT Header has the following components:
 
  1 bit | 2 bits  | 5 bits        
 -------|---------|--------------
- Start | Payload | Packet Count 
+ Start | Message Count | Packet Count 
 
 ## Start
 * 1 bit
 * Set to `1` for the first packet of each App Message, `0` for every other packet
 
-## GT Message ID
+## Message Count
 * 2 bits
 * Increments and rolls over on each new GT Message (0, 1, 2, 3, 0, ...)
 * Helps ensure packets are received in the right order
