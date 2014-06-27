@@ -2,7 +2,7 @@
 
 * Documentation version: 0.2.0 **PRE-RELEASE**
 * Created: 2014-06-25
-* Updated: 2014-06-25
+* Updated: 2014-06-26
 * Copyright: [Punch Through Design](http://punchthrough.com)
 * License: [The MIT License](http://opensource.org/licenses/MIT)
 
