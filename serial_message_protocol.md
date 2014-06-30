@@ -10,6 +10,15 @@
 
 This document describes the protocol used to communicate with the Bean via its Bluetooth Low Energy serial characteristic.
 
+# Attributes
+
+Attribute                     | UUID
+------------------------------|--------------------------------------
+Serial Service                | A495-FF10-C5B1-4B44-B512-1370F02D74DE
+Bean Transport Characteristic | A495-FF11-C5B1-4B44-B512-1370F02D74DE
+
+The serial service holds one characteristic named "Bean Transport."  The Bean Transport characteristic properties are normally set to "notify" by the client to speed up data transmission.  The client writes to the transport characteristic using the write without response property.  
+
 # App Message
 
 The App Message is the highest level of abstraction. Arduino sketches written for the Atmel chip and programs written with the Bean SDK send and receive App Messages.
