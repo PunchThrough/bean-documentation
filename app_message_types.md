@@ -51,7 +51,7 @@ ID Major  |  ID Minor  |  Function                         |  Sender  |  Receive
 
 ID Major  |  ID Minor  |  Function                         |  Sender  |  Receiver  |  Data Struct        |  Description
 ----------|------------|-----------------------------------|----------|------------|---------------------|--------------------------------------------------------------------------------------------------------------------
-0x05      |  0x20      |  Restart                          |  Client  |  Bean      |  N/A                |  Restart the Bean's Bluetooth connection (???).
+0x05      |  0x20      |  Restart                          |  Client  |  Bean      |  N/A                |  Not currently implemented.
 
 ## Bootloader
 
@@ -61,8 +61,8 @@ ID Major  |  ID Minor  |  Function                         |  Sender  |  Receive
 ----------|------------|-----------------------------------|----------|------------|---------------------|--------------------------------------------------------------------------------------------------------------------
 0x10      |  0x00      |  Start                            |  Client  |  Bean      |  bl_start           |  Start a firmware transmission to the Bean. Contains metadata used by the Bean to prepare to receive firmware data.
 0x10      |  0x01      |  Firmware Block                   |  Client  |  Bean      |  bl_firmware_block  |  Contains a block of firmware data for the Bean.
-0x10      |  0x02      |  Status Request                   |  Client  |  Bean      |  N/A                |  Request the Bean's bootloader status (???).
-0x10      |  0x82      |  Status Response                  |  Bean    |  Client    |  bl_status          |  Contains the Bean's bootloader status (???).
+0x10      |  0x02      |  Status Request                   |  Client  |  Bean      |  N/A                |  Request the Bean's bootloader status.
+0x10      |  0x82      |  Status Response                  |  Bean    |  Client    |  bl_status          |  Reports the Bean's bootloader status.
 
 ### Sketch
 
@@ -117,9 +117,9 @@ ID Major  |  ID Minor  |  Function                         |  Sender  |  Receive
 ID Major  |  ID Minor  |  Function                         |  Sender  |  Receiver  |  Data Struct        |  Description
 ----------|------------|-----------------------------------|----------|------------|---------------------|--------------------------------------------------------------------------------------------------------------------
 0x40      |  0x00      |  Error Message                    |  Bean    |  Client    |  error              |  Returned when the Bean encounters an error.
-0xFE      |  0x00      |  Loopback Debug Message           |  Client  |  Bean      |  anything           |  ???
-0xFE      |  0x80      |  Loopback Debug Message Response  |  Bean    |  Client    |  anything           |  ???
-0xFE      |  0x01      |  Get Debug Counter                |  Client  |  Bean      |  counter            |  ???
-0xFE      |  0x81      |  Get Debug Counter Response       |  Bean    |  Client    |  counter            |  ???
-0xFE      |  0x02      |  End-to-end Loopback              |  Client  |  Client    |  anything           |  ???
-0XFE      |  0x03      |  PTM mode communication           |  Client  |  Bean      |  anything           |  ???
+0xFE      |  0x00      |  Loopback Debug Message           |  Client  |  Bean      |  anything           |  
+0xFE      |  0x80      |  Loopback Debug Message Response  |  Bean    |  Client    |  anything           |  
+0xFE      |  0x01      |  Get Debug Counter                |  Client  |  Bean      |  counter            |  
+0xFE      |  0x81      |  Get Debug Counter Response       |  Bean    |  Client    |  counter            |  
+0xFE      |  0x02      |  End-to-end Loopback              |  Client  |  Client    |  anything           |  
+0XFE      |  0x03      |  PTM mode communication           |  Client  |  Bean      |  anything           |  
