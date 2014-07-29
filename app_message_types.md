@@ -1,8 +1,8 @@
 # [LightBlue Bean](http://punchthrough.com/bean/) App Message Types
 
-* Documentation version: 0.3.0 **PRE-RELEASE**
+* Documentation version: 0.3.1 **PRE-RELEASE**
 * Created: 2014-06-25
-* Updated: 2014-06-26
+* Updated: 2014-07-29
 * Copyright: [Punch Through Design](http://punchthrough.com)
 * License: [The MIT License](http://opensource.org/licenses/MIT)
 
@@ -17,6 +17,8 @@ This document defines the message types used in the [Serial Message Protocol](se
 ID Major  |  ID Minor  |  Function                         |  Sender  |  Receiver  |  Data Struct        |  Description
 ----------|------------|-----------------------------------|----------|------------|---------------------|--------------------------------------------------------------------------------------------------------------------
 0x00      |  0x00      |  Serial Pass-Through              |  Client or Bean  |  Bean or Client    |  anything           |  Used for sending serial data to and from the Bean.
+
+Note: Only Bean-to-Client and Client-to-Bean connections are supported at this time. Bean-to-Bean and Client-to-Client connections are not supported.
 
 ## Bluetooth
 
