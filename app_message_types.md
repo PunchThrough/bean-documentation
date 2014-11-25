@@ -1,6 +1,6 @@
 # [LightBlue Bean](http://punchthrough.com/bean/) App Message Types
 
-* Documentation version: 0.3.1 **PRE-RELEASE**
+* Documentation version: 0.3.1
 * Created: 2014-06-25
 * Updated: 2014-07-29
 * Copyright: [Punch Through Design](http://punchthrough.com)
