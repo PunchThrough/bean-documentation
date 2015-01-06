@@ -1,8 +1,8 @@
 # [LightBlue Bean](http://punchthrough.com/bean/) Serial Message Protocol
 
-* Documentation version: 0.3.1
+* Documentation version: 0.3.2
 * Created: 2014-06-25
-* Updated: 2014-06-25
+* Updated: 2015-01-06
 * Copyright: [Punch Through Design](http://punchthrough.com)
 * License: [The MIT License](http://opensource.org/licenses/MIT)
 
@@ -69,15 +69,15 @@ A GST packet has the following components:
 
 The GT is the lowest level of abstraction in the Bean serial message protocol. GT packets are read and written via the Serial characteristic available on the Bean.
 
-Although our GST packets can have lengths of up to 70 bytes, the Bluetooth Low Energy specification allows writes to have maximum lengths of 20 bytes. The GT layer handles this by splitting GST packets into 0 to 19 byte chunks and packaging them with a 1 byte metadata header, then sending the GT packet(s) sequentially.
+Although our GST packets can have lengths of up to 70 bytes, the Bluetooth Low Energy specification allows writes to have maximum lengths of 20 bytes. The GT layer handles this by splitting GST packets into 0 to 19 byte chunks and packaging them with a 1 byte GT Header, then sending the GT packet(s) sequentially.
 
 A GT packet has the following components:
 
-  1 byte | 0-19 bytes
----------|---------
-  Header | Payload 
+ 1 byte     | 0-19 bytes
+------------|---------
+  GT Header | Payload 
 
-## Header
+## GT Header
 * 1 byte
 * Contains metadata describing the context of the attached payload
 
@@ -91,8 +91,8 @@ To guarantee data integrity, the GT layer needs to include some metadata to ensu
 
 A GT Header has the following components:
 
- 1 bit | 2 bits  | 5 bits        
--------|---------|--------------
+ 1 bit | 2 bits        | 5 bits        
+-------|---------------|--------------
  Start | Message Count | Packet Count 
 
 ## Start
