@@ -1,6 +1,5 @@
-# Bean Documents
+# DEPRECATED
 
-This repository holds documentation on various protocols used by the [LightBlue Bean](http://punchthrough.com/bean/) by [Punch Through Design](http://punchthrough.com).
+Documentation for the Bean Serial Protocol can be found here:
 
-* Copyright: [Punch Through Design](http://punchthrough.com)
-* License: [The MIT License](http://opensource.org/licenses/MIT)
+https://github.com/PunchThrough/bean-serial-protocol
